@@ -1,12 +1,18 @@
 # Version 1: Basic Input and Output
 
+import datetime
+
 event = input("Enter event title: ")
 year = int(input("Enter year: "))
 month = int(input("Enter month: "))
 day = int(input("Enter day: "))
+event_date = datetime.date(year, month, day)
+weekday = event_date.strftime("%A")
 
 print("\nFormatted Output:")
 print("Event:", event.upper())
+print("Date:", month, str(day) + ",", year)
 print("Year:", year)
 print("Month:", month)
 print("Day:", day)
+print("Weekday: ", weekday) 
